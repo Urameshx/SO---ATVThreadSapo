@@ -1,6 +1,6 @@
 package controller;
 
-public class Thread_controller extends Thread {
+public class ThreadController extends Thread {
 	private int dist_max; 
 	private int dist_falt;
 	public int dist_perco = 0;
@@ -10,7 +10,7 @@ public class Thread_controller extends Thread {
 	/*DISTANCIA MAXIMA, DISTANCIA FALTANTE, DISTANCIA PERCORRIDA,
 	TEMPO INICIAL, TEMPO FINAL, TEMPO DE EXECUCAO */
 	
-	public Thread_controller(int dist_max) {
+	public ThreadController(int dist_max) {
 		this.dist_max = dist_max;
 	}
 	
@@ -30,7 +30,7 @@ public class Thread_controller extends Thread {
 		temp_final = System.nanoTime();
 		temp_exec = (temp_final - temp_inicial) / (10 ^ 9);
 		
-		System.out.println("CORRIDA FINALIZADA! O sapo nº: " + getId() + " terminou em:  " + 
+		System.out.println("CORRIDA FINALIZADA! O sapo nÂº: " + getId() + " terminou em:  " + 
 		temp_exec  + " ns e percorreu um total de: " + dist_perco + "metros");
 	}
 
@@ -39,7 +39,7 @@ public class Thread_controller extends Thread {
 		dist_perco += salto;
 		dist_falt = dist_max - dist_perco;
 		
-		System.out.println("O sapo nº:" + getId() + ", saltou " + salto + "metros. "
+		System.out.println("O sapo nÂº:" + getId() + ", saltou " + salto + "metros. "
 				+ "Agora restam " + dist_falt + " metros. Foram percorridos =  " 
 				+  dist_perco + " metros");	
 	}
